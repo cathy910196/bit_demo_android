@@ -25,7 +25,7 @@
                   android:paddingRight="@dimen/horizontal_page_margin"
                   android:paddingTop="@dimen/vertical_page_margin"
                   android:paddingBottom="@dimen/vertical_page_margin"
-                  android:text="@strings/intro_message" />
+                  android:text="@string/intro_message" />
         </ScrollView>
 
         <fragment
