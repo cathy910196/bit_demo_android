@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,9 +19,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ViewAnimator;
 
+import com.kouxuan.bit_demo_android.R;
 import com.kouxuan.bit_demo_android.bluetoothchat.BluetoothChatFragment;
-import com.kouxuan.bit_demo_android.bluetoothchat.R;
 import com.kouxuan.bit_demo_android.common.activities.SampleActivityBase;
+
+import androidx.fragment.app.FragmentTransaction;
 
 
 /**

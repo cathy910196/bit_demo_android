@@ -1,3 +1,29 @@
-<resources>
-    <string name="app_name">bit_demo_android</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">點點滴滴</string>
+
+    <!--  BluetoothChat -->
+    <string name="send">Send</string>
+    <string name="not_connected">尚未連接到點滴裝置</string>
+    <string name="bt_not_enabled_leaving">藍芽未啟用</string>
+    <string name="title_connecting">連結中...</string>
+    <string name="title_connected_to">連結到 <xliff:g id="device_name">%1$s</xliff:g></string>
+    <string name="title_not_connected">未連結</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">掃描附近裝置...</string>
+    <string name="select_device">選擇裝置</string>
+    <string name="none_paired">沒有裝置能配對</string>
+    <string name="none_found">無法搜尋到裝置</string>
+    <string name="title_paired_devices">裝置配對</string>
+    <string name="title_other_devices">其他可用裝置</string>
+    <string name="button_scan">在掃描其他裝置</string>
+
+    <!-- Options Menu -->
+    <string name="secure_connect">連結裝置</string>
+    <string name="insecure_connect">連結裝置</string>
+    <string name="discoverable">擴大配對範圍</string>
+
+    <string name="intro_message">藍芽連結步驟：\n1. 掃描其他藍牙設備\n2. 查詢附近藍牙裝置\n3. 建立通道\n4. 連接到遠程設備n5. 通過藍牙傳輸數據\n</string>
+    <string name="sample_show_log">Show Log</string>
+    <string name="sample_hide_log">Hide Log</string>
 </resources>

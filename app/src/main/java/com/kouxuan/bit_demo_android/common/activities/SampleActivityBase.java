@@ -17,10 +17,11 @@
 package com.kouxuan.bit_demo_android.common.activities;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 
 import com.kouxuan.bit_demo_android.common.logger.Log;
 import com.kouxuan.bit_demo_android.common.logger.LogWrapper;
+
+import androidx.fragment.app.FragmentActivity;
 
 /**
  * Base launcher activity, to handle most of the common plumbing for samples.

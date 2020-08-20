@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.kouxuan.bit_demo_android.bluetoothchat.R;
+import com.kouxuan.bit_demo_android.R;
 
 /**
  * Created by KouxuanNB on 2016/8/29.

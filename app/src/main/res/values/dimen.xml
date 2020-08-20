@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="horizontal_page_margin" tools:override="true">0dp</dimen>
+    <dimen name="vertical_page_margin" tools:override="true">0dp</dimen>
+    <dimen name="design_navigation_padding_bottom" tools:override="true">0dp</dimen>
+    <dimen name="design_navigation_icon_padding" tools:override="true">10dp</dimen>
+</resources>

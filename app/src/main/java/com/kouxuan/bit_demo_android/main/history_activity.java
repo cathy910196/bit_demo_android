@@ -15,7 +15,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
-import com.kouxuan.bit_demo_android.bluetoothchat.R;
+import com.kouxuan.bit_demo_android.R;
 
 /**
  * Created by KouxuanNB on 2016/8/29.

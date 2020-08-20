@@ -20,13 +20,13 @@ package com.kouxuan.bit_demo_android.bluetoothchat;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ViewAnimator;
 
+import com.kouxuan.bit_demo_android.R;
 import com.kouxuan.bit_demo_android.common.activities.SampleActivityBase;
 import com.kouxuan.bit_demo_android.common.logger.Log;
 import com.kouxuan.bit_demo_android.common.logger.LogFragment;
@@ -34,13 +34,8 @@ import com.kouxuan.bit_demo_android.common.logger.LogWrapper;
 import com.kouxuan.bit_demo_android.common.logger.MessageOnlyLogFilter;
 import com.kouxuan.bit_demo_android.main.main_screen;
 
-/**
- * A simple launcher activity containing a summary sample description, sample log and a custom
- * {@link android.support.v4.app.Fragment} which can display a view.
- * <p>
- * For devices with displays with a width of 720dp or greater, the sample log is always visible,
- * on other devices it's visibility is controlled by an item on the Action Bar.
- */
+import androidx.fragment.app.FragmentTransaction;
+
 public class MainActivity extends SampleActivityBase {
 
     public static final String TAG = "MainActivity";

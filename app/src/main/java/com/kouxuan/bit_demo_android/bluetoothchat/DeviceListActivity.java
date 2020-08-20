@@ -32,6 +32,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.kouxuan.bit_demo_android.R;
 import com.kouxuan.bit_demo_android.common.logger.Log;
 
 import java.util.Set;
