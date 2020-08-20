@@ -58,9 +58,7 @@ public class alarm_activity  extends SampleActivityBase {
         ad=(ListView)findViewById(R.id.alarm_data);
         bb=(Button)findViewById(R.id.back_button);
         bb.setOnClickListener(listener1);
-        context=this;
         adapter = new MyAdapter(this);
-
 
         bundle = getIntent().getExtras();
         if(bundle==null){
@@ -237,11 +235,6 @@ public class alarm_activity  extends SampleActivityBase {
             return convertView;
         }
 
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
     }
 
     @Override

@@ -85,6 +85,7 @@ public class BluetoothChatFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("logtest", "onCreate BluetoothChatFragment");
         setHasOptionsMenu(true);
         // Get local Bluetooth adapter
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -403,6 +404,7 @@ public class BluetoothChatFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        Log.d("logtest", "onCreateOptionsMenu init menu");
         inflater.inflate(R.menu.bluetooth_chat, menu);
     }
 

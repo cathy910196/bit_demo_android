@@ -17,7 +17,10 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 import com.kouxuan.bit_demo_android.R;
+import com.kouxuan.bit_demo_android.bluetoothchat.BluetoothChatFragment;
 import com.kouxuan.bit_demo_android.common.logger.Log;
+
+import androidx.fragment.app.FragmentTransaction;
 
 /**
  * Created by KouxuanNB on 2016/8/29.

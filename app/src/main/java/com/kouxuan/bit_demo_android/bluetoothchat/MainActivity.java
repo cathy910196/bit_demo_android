@@ -60,12 +60,6 @@ public class MainActivity extends SampleActivityBase {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         MenuItem logToggle = menu.findItem(R.id.menu_toggle_log);
         logToggle.setVisible(findViewById(R.id.sample_output) instanceof ViewAnimator);
