@@ -17,6 +17,7 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 import com.kouxuan.bit_demo_android.R;
+import com.kouxuan.bit_demo_android.common.logger.Log;
 
 /**
  * Created by KouxuanNB on 2016/8/29.
@@ -45,16 +46,29 @@ public class history_activity extends Activity {
         db = DH.getWritableDatabase();*/
         openDB();
 
-        add("床號：101-A", "蔡茵雯", "點滴：生理食鹽水", "主治醫師：陳當歸");
-        add("床號：101-B", "馬應酒", "點滴：葡萄糖水溶液", "主治醫師：徐大棗");
-        add("床號：102-A", "王景平", "點滴：林格氏液", "主治醫師：黃耆");
-        add("床號：102-B", "呂繡璉", "點滴：乳酸林格氏液", "主治醫師：王肉桂");
-        add("床號：201-A", "陳小橘", "點滴：高張溶液", "主治醫師：黃柏");
-        add("床號：201-B", "陳隨扁", "點滴：生理食鹽水", "主治醫師：蔡黨蔘");
-        add("床號：202-A", "朱粒崙", "點滴：葡萄糖水溶液", "主治醫師：胡靈芝");
-        add("床號：201-B", "賴沁徳", "點滴：林格氏液", "主治醫師：黃連之");
+        // chechDBnull == false -> add new data
+        if (chechDBnull()) {
+            add("床號：101-A", "蔡茵雯", "點滴：生理食鹽水", "主治醫師：陳當歸");
+            add("床號：101-B", "馬應酒", "點滴：葡萄糖水溶液", "主治醫師：徐大棗");
+            add("床號：102-A", "王景平", "點滴：林格氏液", "主治醫師：黃耆");
+            add("床號：102-B", "呂繡璉", "點滴：乳酸林格氏液", "主治醫師：王肉桂");
+            add("床號：201-A", "陳小橘", "點滴：高張溶液", "主治醫師：黃柏");
+            add("床號：201-B", "陳隨扁", "點滴：生理食鹽水", "主治醫師：蔡黨蔘");
+            add("床號：202-A", "朱粒崙", "點滴：葡萄糖水溶液", "主治醫師：胡靈芝");
+            add("床號：201-B", "賴沁徳", "點滴：林格氏液", "主治醫師：黃連之");
+        }
         cursor = getAll();       // 查詢所有資料
         UpdateAdapter(cursor); // 載入資料表至 ListView 中
+    }
+
+    private boolean chechDBnull() {
+        Cursor cursor = db.rawQuery("SELECT * FROM table01", null);
+        Log.d("logtest", "cursor.getCount() = " + cursor.getCount());
+        if (cursor.getCount() > 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     @Override
@@ -79,14 +93,13 @@ public class history_activity extends Activity {
 
     private void add(String _bed_numbers, String _patient_names, String _bit_components, String _docctor_name) {
         // db = DH.getWritableDatabase();
+        Log.d("logtest", "add func");
         ContentValues values = new ContentValues();
         values.put("_bed_numbers", _bed_numbers.toString());
         values.put("_patient_names", _patient_names.toString());
         values.put("_bit_components", _bit_components.toString());
         values.put("_doctor_name", _docctor_name.toString());
-        // values.put("_doctor_names",_doctor_names.toString());
-
-
+        
         db.insert("table01", null, values);
     }
 
