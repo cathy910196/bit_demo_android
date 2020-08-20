@@ -20,6 +20,7 @@ import android.widget.ViewAnimator;
 import com.kouxuan.bit_demo_android.R;
 import com.kouxuan.bit_demo_android.bluetoothchat.BluetoothChatFragment;
 import com.kouxuan.bit_demo_android.common.activities.SampleActivityBase;
+import com.kouxuan.bit_demo_android.common.logger.Log;
 
 import androidx.fragment.app.FragmentTransaction;
 
@@ -141,15 +142,18 @@ public class search_activity extends SampleActivityBase {
 
     private Button.OnClickListener myListener = new Button.OnClickListener() {
         public void onClick(View v) {
+            Log.d("logtest", "search " + et.getText().toString());
             try {
                 switch (v.getId()) {
                     case R.id.btnSaerch: {     // 查詢單筆
+                        Log.d("logtest", "查詢單筆");
                         long id = Integer.parseInt(et.getText().toString());
                         cursor = get(id);
                         UpdateAdapter(cursor); // 載入資料表至 ListView 中
                         break;
                     }
                     case R.id.btnSearchAll: {    // 查詢全部
+                        Log.d("logtest", "查詢全部");
                         cursor = getAll();       // 查詢所有資料
                         UpdateAdapter(cursor); // 載入資料表至 ListView 中
                         break;
@@ -167,7 +171,7 @@ public class search_activity extends SampleActivityBase {
             SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,
                     R.layout.data_layout_2, // 包含兩個資料項
                     cursor, // 資料庫的 Cursors 物件
-                    new String[]{"_bed_numbers", "_patient_names", "_bit_components", "test"},
+                    new String[]{"_bed_numbers", "_patient_names", "_bit_components", "_doctor_name"},
                     new int[]{R.id.textView1, R.id.textView2, R.id.textView3, R.id.textView4},
                     0); // adapter 行為最佳化
             lv.setAdapter(adapter); // 將adapter增加到listview01中
@@ -176,6 +180,7 @@ public class search_activity extends SampleActivityBase {
 
     public Cursor getAll() { // 查詢所有資料
         Cursor cursor = db.rawQuery("SELECT * FROM table01", null);
+        Log.d("logtest", "search add" + cursor.getCount());
         return cursor; // 傳回欄位
     }
 

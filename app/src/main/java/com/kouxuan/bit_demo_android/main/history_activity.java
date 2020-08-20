@@ -90,7 +90,6 @@ public class history_activity extends Activity {
         }
     };
 
-
     private void add(String _bed_numbers, String _patient_names, String _bit_components, String _docctor_name) {
         // db = DH.getWritableDatabase();
         Log.d("logtest", "add func");
@@ -99,7 +98,7 @@ public class history_activity extends Activity {
         values.put("_patient_names", _patient_names.toString());
         values.put("_bit_components", _bit_components.toString());
         values.put("_doctor_name", _docctor_name.toString());
-        
+
         db.insert("table01", null, values);
     }
 
