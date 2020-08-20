@@ -42,7 +42,7 @@ public class main_screen extends Activity {
             Intent intent3 = new Intent();
             intent3.setClass(context,com.kouxuan.bit_demo_android.main.search_activity.class);
             startActivity(intent3);
-            finish();
+            //finish();
         }
     };
     private Button.OnClickListener listener2 = new Button.OnClickListener(){
@@ -51,7 +51,7 @@ public class main_screen extends Activity {
             Intent intent3 = new Intent();
             intent3.setClass(context,com.kouxuan.bit_demo_android.bluetoothchat.MainActivity.class);
             startActivity(intent3);
-            finish();
+            //finish();
         }
     };
 
@@ -61,7 +61,7 @@ public class main_screen extends Activity {
             Intent intent3 = new Intent();
             intent3.setClass(context,com.kouxuan.bit_demo_android.main.alarm_activity.class);
             startActivity(intent3);
-            finish();
+            //finish();
         }
     };
     private Button.OnClickListener listener4 = new Button.OnClickListener(){
@@ -70,7 +70,7 @@ public class main_screen extends Activity {
             Intent intent3 = new Intent();
             intent3.setClass(context,com.kouxuan.bit_demo_android.main.history_activity.class);
             startActivity(intent3);
-            finish();
+            //finish();
         }
     };
 }

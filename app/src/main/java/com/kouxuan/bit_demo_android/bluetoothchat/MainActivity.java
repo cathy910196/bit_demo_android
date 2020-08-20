@@ -117,7 +117,7 @@ public class MainActivity extends SampleActivityBase {
             Intent intent1 = new Intent();
             intent1.setClass(context,main_screen.class);
             startActivity(intent1);
-            finish();
+            //finish();
         }
     };
 

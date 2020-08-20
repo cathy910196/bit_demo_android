@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -56,14 +57,21 @@ public class history_activity extends Activity {
         UpdateAdapter(cursor); // 載入資料表至 ListView 中
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     //回前頁
     private Button.OnClickListener listener1 = new Button.OnClickListener() {
         @Override
         public void onClick(View arg0) {
-            Intent intent1 = new Intent();
+            /*Intent intent1 = new Intent();
             intent1.setClass(context, main_screen.class);
-            startActivity(intent1);
+            startActivity(intent1);*/
             finish();
         }
     };

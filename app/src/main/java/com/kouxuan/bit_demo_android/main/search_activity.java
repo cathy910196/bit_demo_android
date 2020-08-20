@@ -71,9 +71,9 @@ public class search_activity extends SampleActivityBase {
     private Button.OnClickListener listener1 = new Button.OnClickListener() {
         @Override
         public void onClick(View arg0) {
-            Intent intent1 = new Intent();
+            /*Intent intent1 = new Intent();
             intent1.setClass(context, main_screen.class);
-            startActivity(intent1);
+            startActivity(intent1);*/
             finish();
         }
     };
